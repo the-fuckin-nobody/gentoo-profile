@@ -1,0 +1,14 @@
+diff --git a/build.zig b/build.zig
+index 61402657..f6d2f8dd 100644
+--- a/build.zig
++++ b/build.zig
+@@ -1113,7 +1113,7 @@ fn addDeps(
+         step.root_module.addImport("freetype", freetype_dep.module("freetype"));
+ 
+         if (b.systemIntegrationOption("freetype", .{})) {
+-            step.linkSystemLibrary2("bzip2", dynamic_link_opts);
++            step.linkSystemLibrary2("bz2", dynamic_link_opts);
+             step.linkSystemLibrary2("freetype2", dynamic_link_opts);
+         } else {
+             step.linkLibrary(freetype_dep.artifact("freetype"));
+

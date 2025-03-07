@@ -1,0 +1,36 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/tokyonight-moon.toml"
+]
+live_config_reload = true
+ipc_socket = false
+
+[window]
+padding = { x = 5, y = 5}
+dynamic_padding = false
+dynamic_title = true
+opacity = 1
+
+[font]
+normal = { family = "Lotion Nerd Font Propo", style = "Regular" }
+bold = { family = "Lotion Nerd Font Propo", style = "Bold" }
+italic = { family = "Lotion Nerd Font Propo", style = "Italic" }
+bold_italic = { family = "Lotion Nerd Font Propo", style = "Bold Italic" }
+size = 12
+
+builtin_box_drawing = true
+
+[scrolling]
+history = 100000
+
+[bell]
+duration = 0
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+blink_interval = 750
+blink_timeout = 10
+thickness = 0.25
+
+[terminal]
+shell = "/usr/bin/fish"

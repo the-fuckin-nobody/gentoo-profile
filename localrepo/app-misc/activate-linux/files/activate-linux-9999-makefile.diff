@@ -1,0 +1,25 @@
+diff --git a/Makefile b/Makefile
+index 538a121..758c3c8 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,7 +10,7 @@ DESTDIR ?=
+ PREFIX ?= /usr/local
+ BINDIR ?= bin
+ 
+-MANDIR ?= $(PREFIX)/share/man
++MANDIR ?= $(DESTDIR)$(PREFIX)/share/man
+ 
+ # implemented backends: wayland x11 gdi
+ backends ?= wayland x11
+@@ -149,9 +149,8 @@ install: $(BINARY)
+ 	install -Dm0644 activate-linux.1 $(MANDIR)/man1/activate-linux.1
+ 
+ uninstall:
+-	sudo $(RM) -f $(DESTDIR)$(PREFIX)/$(BINDIR)/$(BINARY)
+-	sudo $(RM) -f $(MANDIR)/man1/activate-linux.1
+-	sudo mandb -q
++	$(RM) -f $(DESTDIR)$(PREFIX)/$(BINDIR)/$(BINARY)
++	$(RM) -f $(MANDIR)/man1/activate-linux.1
+ 
+ appimage: $(BINARY)
+ 	curl -#L -O https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage

@@ -1,0 +1,9 @@
+app-editors/neovim **
+dev-libs/tree-sitter **
+dev-libs/tree-sitter-lua **
+dev-libs/tree-sitter-markdown **
+dev-libs/tree-sitter-c **
+app-portage/smart-live-rebuild **
+x11-terms/alacritty **
+x11-misc/dunst **
+llvm-runtime/compiler-rt-sanitizers **

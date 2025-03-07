@@ -1,0 +1,151 @@
+08:19:21.191: Platform: Wayland
+08:19:21.191: CPU Name: 12th Gen Intel(R) Core(TM) i5-12450H
+08:19:21.191: CPU Speed: 3918.392MHz
+08:19:21.191: Physical Cores: 8, Logical Cores: 8
+08:19:21.191: Physical Memory: 15712MB Total, 10981MB Free
+08:19:21.191: Kernel Version: Linux 6.13.3-gentoo-r1-local
+08:19:21.191: Distribution: Gentoo "2.17"
+08:19:21.191: Desktop Environment: niri
+08:19:21.191: Session Type: wayland
+08:19:21.194: Qt Version: 6.8.2 (runtime), 6.8.2 (compiled)
+08:19:21.194: Portable mode: false
+08:19:21.246: OBS 31.0.1 (linux)
+08:19:21.246: ---------------------------------
+08:19:21.247: ---------------------------------
+08:19:21.247: audio settings reset:
+08:19:21.247: 	samples per sec: 48000
+08:19:21.247: 	speakers:        2
+08:19:21.247: 	max buffering:   960 milliseconds
+08:19:21.247: 	buffering type:  dynamically increasing
+08:19:21.248: ---------------------------------
+08:19:21.248: Initializing OpenGL...
+08:19:21.248: Using EGL/Wayland
+08:19:21.255: Initialized EGL 1.5
+08:19:21.268: Loading up OpenGL on adapter Intel Mesa Intel(R) Graphics (ADL GT2)
+08:19:21.268: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 24.3.4, shading language 4.60
+08:19:21.293: ---------------------------------
+08:19:21.293: video settings reset:
+08:19:21.293: 	base resolution:   1920x1080
+08:19:21.293: 	output resolution: 1920x1080
+08:19:21.293: 	downscale filter:  Bicubic
+08:19:21.293: 	fps:               60/1
+08:19:21.293: 	format:            NV12
+08:19:21.293: 	YUV mode:          Rec. 709/Partial
+08:19:21.293: NV12 texture support enabled
+08:19:21.293: P010 texture support not available
+08:19:21.298: Audio monitoring device:
+08:19:21.298: 	name: Default
+08:19:21.298: 	id: default
+08:19:21.298: ---------------------------------
+08:19:21.340: [pipewire] Available capture sources:
+08:19:21.340: [pipewire]     - Monitor source
+08:19:21.340: [pipewire]     - Window source
+08:19:21.352: v4l2loopback not installed, virtual camera not registered
+08:19:21.365: VAAPI: API version 1.22
+08:19:21.369: FFmpeg VAAPI H264 encoding supported
+08:19:21.374: FFmpeg VAAPI AV1 encoding not supported
+08:19:21.378: FFmpeg VAAPI HEVC encoding supported
+08:19:21.419: ---------------------------------
+08:19:21.419:   Loaded Modules:
+08:19:21.419:     rtmp-services.so
+08:19:21.419:     obs-x264.so
+08:19:21.419:     obs-vst.so
+08:19:21.419:     obs-transitions.so
+08:19:21.419:     obs-outputs.so
+08:19:21.419:     obs-filters.so
+08:19:21.419:     obs-ffmpeg.so
+08:19:21.419:     linux-v4l2.so
+08:19:21.419:     linux-pulseaudio.so
+08:19:21.419:     linux-pipewire.so
+08:19:21.419:     linux-capture.so
+08:19:21.419:     linux-alsa.so
+08:19:21.419:     image-source.so
+08:19:21.419:     frontend-tools.so
+08:19:21.419: ---------------------------------
+08:19:21.419: ---------------------------------
+08:19:21.419: Available Encoders:
+08:19:21.419:   Video Encoders:
+08:19:21.419: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+08:19:21.419: 	- hevc_ffmpeg_vaapi_tex (FFmpeg VAAPI HEVC)
+08:19:21.419: 	- obs_x264 (x264)
+08:19:21.419:   Audio Encoders:
+08:19:21.419: 	- ffmpeg_aac (FFmpeg AAC)
+08:19:21.419: 	- ffmpeg_opus (FFmpeg Opus)
+08:19:21.419: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+08:19:21.419: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+08:19:21.419: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+08:19:21.419: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+08:19:21.419: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+08:19:21.419: ==== Startup complete ===============================================
+08:19:21.442: All scene data cleared
+08:19:21.442: ------------------------------------------------
+08:19:21.447: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+08:19:21.447: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+08:19:21.447: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor' (default)
+08:19:21.447: [Loaded global audio device]: 'Desktop Audio'
+08:19:21.448: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+08:19:21.448: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+08:19:21.448: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo' (default)
+08:19:21.448: [Loaded global audio device]: 'Mic/Aux'
+08:19:21.449: PipeWire initialized
+08:19:21.450: Switched to scene 'Scene'
+08:19:21.450: ------------------------------------------------
+08:19:21.450: Loaded scenes:
+08:19:21.450: - scene 'Scene':
+08:19:21.450:     - source: 'Screen Capture (PipeWire)' (pipewire-screen-capture-source)
+08:19:21.450: ------------------------------------------------
+08:19:21.473: [pipewire] Screencast session created
+08:19:21.492: [pipewire] Asking for monitor and window
+08:19:21.532: [pipewire] source selected, setting up screencast
+08:19:21.536: [pipewire] Server version: 1.2.7
+08:19:21.536: [pipewire] Library version: 1.2.7
+08:19:21.536: [pipewire] Header version: 1.2.7
+08:19:21.536: [pipewire] Created stream 0x5582d3098730
+08:19:21.536: [pipewire] Stream 0x5582d3098730 state: "connecting" (error: none)
+08:19:21.536: [pipewire] Playing stream 0x5582d3098730
+08:19:21.536: [pipewire] Stream 0x5582d3098730 state: "paused" (error: none)
+08:19:21.551: [pipewire] Negotiated format:
+08:19:21.551: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+08:19:21.551: [pipewire]     Modifier: 0x0
+08:19:21.551: [pipewire]     Size: 1920x1080
+08:19:21.551: [pipewire]     Framerate: 0/1
+08:19:21.551: [pipewire] Negotiated format:
+08:19:21.551: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+08:19:21.551: [pipewire]     Modifier: 0x100000000000008
+08:19:21.551: [pipewire]     Size: 1920x1080
+08:19:21.551: [pipewire]     Framerate: 0/1
+08:19:21.624: [pipewire] Stream 0x5582d3098730 state: "streaming" (error: none)
+08:19:21.994: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+08:19:21.994: 
+08:19:24.115: Source ID 'text_ft2_source' not found
+08:19:24.115: Failed to create source 'Preview spacing label 0'!
+08:19:24.115: Source ID 'text_ft2_source' not found
+08:19:24.115: Failed to create source 'Preview spacing label 1'!
+08:19:24.115: Source ID 'text_ft2_source' not found
+08:19:24.115: Failed to create source 'Preview spacing label 2'!
+08:19:24.115: Source ID 'text_ft2_source' not found
+08:19:24.115: Failed to create source 'Preview spacing label 3'!
+08:19:27.606: [pipewire] Stream 0x5582d3098730 state: "paused" (error: none)
+08:19:27.608: [pipewire] Stream 0x5582d3098730 state: "unconnected" (error: none)
+08:19:27.609: PipeWire initialized
+08:19:27.615: [pipewire] Screencast session created
+08:19:27.616: [pipewire] Asking for monitor and window
+08:19:33.594: [pipewire] source selected, setting up screencast
+08:19:33.599: [pipewire] Server version: 1.2.7
+08:19:33.599: [pipewire] Library version: 1.2.7
+08:19:33.599: [pipewire] Header version: 1.2.7
+08:19:33.599: [pipewire] Created stream 0x5582d30a27f0
+08:19:33.599: [pipewire] Stream 0x5582d30a27f0 state: "connecting" (error: none)
+08:19:33.599: [pipewire] Playing stream 0x5582d30a27f0
+08:19:33.599: [pipewire] Stream 0x5582d30a27f0 state: "paused" (error: none)
+08:19:33.615: [pipewire] Negotiated format:
+08:19:33.615: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+08:19:33.615: [pipewire]     Modifier: 0x0
+08:19:33.615: [pipewire]     Size: 1920x1080
+08:19:33.615: [pipewire]     Framerate: 0/1
+08:19:33.615: [pipewire] Negotiated format:
+08:19:33.615: [pipewire]     Format: 8 (Spa:Enum:VideoFormat:BGRx)
+08:19:33.615: [pipewire]     Modifier: 0x100000000000008
+08:19:33.615: [pipewire]     Size: 1920x1080
+08:19:33.615: [pipewire]     Framerate: 0/1
+08:19:33.622: [pipewire] Stream 0x5582d30a27f0 state: "streaming" (error: none)

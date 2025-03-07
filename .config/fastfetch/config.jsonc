@@ -1,0 +1,194 @@
+{
+	"$schema": "file:/home/dex/.config/fastfetch/schema.json",
+	"logo": {
+		"type": "auto",
+		"source": "~/.config/fastfetch/logo.txt",
+		"position": "left",
+		"color": {
+			"1": "light_white",
+			"4": "black",
+			"2": "magenta"
+		}
+	},
+	"display": {
+		"separator": "",
+		"key": {
+			"paddingLeft": 0,
+			"width": 25
+		},
+		"color": "italic_magenta"
+	},
+	"general": {
+		"multithreading": true
+	},
+	"modules": [
+		{
+			"type": "title",
+			"format": "{user-name-colored} {at-symbol-colored} {host-name-colored}",
+			"color": {
+				"user": "yellow",
+				"at": "red",
+				"host": "magenta"
+			},
+			"key": "\t\t\t\t{icon} ",
+			"keyColor": "italic_blue",
+			"keyWidth": 30,
+			"keyIcon": " "
+		},
+		{
+			"type": "custom",
+			"format": "\t\t╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌",
+			"outputColor": "cyan"
+		},
+		{
+			"type": "custom",
+			"format": " \u001b[37m● \u001b[30m \u001b[36m● \u001b[31m \u001b[35m● \u001b[32m \u001b[34m● \u001b[33m \u001b[33m● \u001b[34m \u001b[32m● \u001b[35m \u001b[31m● \u001b[36m \u001b[30m● \u001b[37m",
+			"key": "\t\t     󰮯",
+			"keyWidth": 18,
+			"keyColor": "bright_yellow"
+		},
+		{
+			"type": "custom",
+			"format": "╭──────────────────────   \u001b[0mHardware Info \u001b[35m──────────────────────╮",
+			"outputColor": "magenta",
+			"key": " "
+		},
+		{
+			"type": "custom",
+			"format": "│   \u001b[33m╭────────────────╮",
+			"outputColor": "magenta",
+		},
+
+		{
+			"type": "host",
+			"format": "\u001b[33m│ \u001b[0m{vendor} {family}",
+			"key": "│   \u001b[33m│  \u001b[32m{icon}  \u001b[34mHost",
+			"keyWidth": 22
+		},
+		{
+			"type": "cpu",
+			"format": "\u001b[33m│ \u001b[0m{name}{temperature}",
+			"key": "│   \u001b[33m│  \u001b[31m  \u001b[34mCPU",
+			"keyWidth": 22
+		},
+		{
+			"type": "gpu",
+			"format": "\u001b[33m│ \u001b[0m{vendor} {name} {shared-used}",
+			"key": "│   \u001b[33m│  \u001b[36m{icon}  \u001b[34mGPU",
+			"keyWidth": 22
+		},
+		{
+			"type": "display",
+			"format": "\u001b[33m│ \u001b[0m{width} x {height} @ 144Hz",
+			"key": "│   \u001b[33m│  \u001b[37m{icon}  \u001b[34mDisplay",
+			"keyWidth": 22
+		},
+		{
+			"type": "custom",
+			"format": "│   \u001b[33m╰────────────────╯",
+			"outputColor": "magenta"
+		},
+		{
+			"type": "custom",
+			"format": "╰──────────────────────────────────────────────────────────────╯",
+			"outputColor": "magenta"
+		},
+		{
+			"type": "custom",
+			"format": " \u001b[37m● \u001b[30m \u001b[36m● \u001b[31m \u001b[35m● \u001b[32m \u001b[34m● \u001b[33m \u001b[33m● \u001b[34m \u001b[32m● \u001b[35m \u001b[31m● \u001b[36m \u001b[30m● \u001b[37m",
+			"key": "\t\t     󰮯",
+			"keyWidth": 18,
+			"keyColor": "bright_yellow"
+		},
+		{
+			"type": "custom",
+			"format": "╭───────────────────────   \u001b[0mSystem Info \u001b[34m───────────────────────╮",
+			"outputColor": "blue",
+			"key": " "
+		},
+		{
+			"type": "custom",
+			"format": "│   \u001b[33m╭───────────────────╮",
+			"key": " ",
+			"outputColor": "blue"
+		},
+		{
+			"type": "os",
+			"format": "\u001b[33m│ \u001b[0m{sysname}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[35m  \u001b[34mOS"
+		},
+		{
+			"type": "os",
+			"format": "\u001b[33m│ \u001b[0m{pretty-name}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[35m  \u001b[34mDistro",
+		},
+		{
+			"type": "kernel",
+			"format": "\u001b[33m│ \u001b[0m{release}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[33m{icon}  \u001b[34mKernel"
+		},
+		{
+			"type": "shell",
+			"format": "\u001b[33m│ \u001b[0m{pretty-name}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[37m{icon}  \u001b[34mShell"
+		},
+		{
+			"type": "packages",
+			"format": "\u001b[33m│ \u001b[0m{emerge} emerged",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[32m{icon}  \u001b[34mPackages"
+		},
+		{
+			"type": "wm",
+			"format": "\u001b[33m│ \u001b[0m{pretty-name}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[31m{icon}  \u001b[34mWM"
+		},
+		{
+			"type": "datetime",
+			"format": "\u001b[33m│ \u001b[0m{weekday}, {month-name} {day-in-month}, {year} - {hour}h {minute}m {second}s",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[34m{icon}  Date & Time"
+		},
+		{
+			"type": "memory",
+			"format": "\u001b[33m│ \u001b[0m{used}/{total} ({percentage})",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[35m{icon}  \u001b[34mRAM"
+		},
+		{
+			"type": "cpuusage",
+			"format": "\u001b[33m│ \u001b[0m{avg}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[35m{icon}  \u001b[34mCPU Load"
+		},
+		{
+			"type": "uptime",
+			"format": "\u001b[33m│ \u001b[0m{hours}h {minutes}m {seconds}s",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[36m{icon}  \u001b[34mUp Time"
+		},
+		{
+			"type": "battery",
+			"format": "\u001b[33m│ \u001b[0m{capacity} {status}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[32m󰂎  \u001b[34mBattery",
+			"keyIcon": ""
+		},
+		{
+			"type": "terminal",
+			"format": "\u001b[33m│ \u001b[0m{pretty-name} v{version}",
+			"key": "\u001b[34m│   \u001b[33m│  \u001b[37m{icon} \u001b[34mTerminal"
+		},
+		{
+			"type": "custom",
+			"format": "│   \u001b[33m╰───────────────────╯",
+			"outputColor": "blue"
+		},
+		{
+			"type": "custom",
+			"format": "╰──────────────────────────────────────────────────────────────╯",
+			"outputColor": "blue"
+		},
+		{
+			"type": "custom",
+			"format": " \u001b[37m● \u001b[30m \u001b[36m● \u001b[31m \u001b[35m● \u001b[32m \u001b[34m● \u001b[33m \u001b[33m● \u001b[34m \u001b[32m● \u001b[35m \u001b[31m● \u001b[36m \u001b[30m● \u001b[37m",
+			"key": "\t\t     󰮯",
+			"keyWidth": 18,
+			"keyColor": "bright_yellow"
+		}
+	]
+}

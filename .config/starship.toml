@@ -1,0 +1,203 @@
+"$schema" = '~/.config/starship-config-schema.json'
+palette = 'tokyonight'
+format = '''
+$character$username[](fg:fg bg:black)[](bg:blue fg:bg)$directory[](bg:black fg:blue)[](bg:blue7 fg:bg)$git_branch$git_status[](bg:black fg:blue7)$fill[](bg:black fg:blue7)[](fg:bg bg:blue7)[](bg:black fg:blue)[](fg:bg bg:blue)[](fg:fg bg:bg)$shell[](fg:fg bg:black)[](fg:bg bg:blue)[](bg:black fg:blue)[](fg:bg bg:blue7)[](bg:black fg:blue7)$fill[](fg:blue7 bg:black)$battery[](fg:black bg:blue7)[](fg:blue bg:black)$time[](fg:black bg:blue)[](fg:fg bg:black)$os
+$character
+'''
+
+[shell]
+disabled = false
+format = "[ via$indicator]($style)"
+fish_indicator = " 󰈺 "
+bash_indicator = "  "
+style = "fg:bg bg:fg"
+
+[directory]
+truncation_length = 4
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+read_only = " "
+read_only_style = "fg:red1 bg:blue"
+home_symbol = "~"
+truncation_symbol = ' /'
+truncate_to_repo = false
+repo_root_format = "[ $before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)[$read_only]($read_only_style)"
+before_repo_root_style = 'bg:blue fg:black'
+repo_root_style = "fg:black bg:blue italic underline"
+style = "fg:black bg:blue"
+use_os_path_sep = false
+use_logical_path = true
+
+[directory.substitutions]
+'~/Downloads' = ' '
+'~/Videos' = ' '
+'~/Music' = ' '
+'~/Documents' = ' '
+'~/Pictures' = ' '
+'~/Desktop' = ' '
+'~/Templates' = ' '
+'~/Public' = ' '
+'~/.config' = ' '
+' /' = ' ❭'
+'~' = "󱂵 "
+
+[git_branch]
+always_show_remote = false
+format = "[ $symbol$branch(:$remote_branch) ]($style)"
+symbol = " "
+style = "fg:blue1 bg:blue7"
+
+[git_commit]
+commit_hash_length = 8
+format = '[ \($hash$tag\) ]($style)'
+tag_symbol = '  '
+style = "fg:blue1 bg:blue7"
+only_detached = false
+tag_disabled = false
+tag_max_candidates = 2
+
+[git_status]
+format = '[\[](bg:blue7 fg:green)[$conflicted$deleted$stashed]($style)[$renamed$modified$typechanged](bg:blue7 fg:orange)[$staged$untracked$ahead_behind](bg:blue7 fg:green)[\]](bg:blue7 fg:green)'
+deleted = "✘ "
+modified = ""
+up_to_date = " "
+style = 'fg:red bg:blue7'
+
+[os]
+format = "[ $symbol ]($style)"
+style = 'fg:black bg:fg'
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[character]
+format = '$symbol'
+success_symbol = "[▍](green)"
+error_symbol = "[▍](red1)"
+
+[time]
+format = "[ 󱑒 $time ]($style)"
+style = 'bg:blue fg:bg'
+# utc_time_offset = ''
+disabled = false
+
+[battery]
+format = "[ $symbol$percentage ]($style)"
+
+[[battery.display]]
+threshold = 30
+style = "bg:blue7 fg:orange bold"
+
+[[battery.display]]
+threshold = 20
+style = "bg:blue7 fg:red bold"
+
+[username]
+disabled = false
+format = "[ $user ]($style)"
+style_root = "fg:#ff0000 bg:fg bold"
+style_user = "fg:black bg:fg bold"
+show_always = true
+aliases = { "root" = "󰚌 Root", "dex" = " Dex" }
+
+[palettes.tokyonight]
+bg = "#1e2030"
+bg_dark = "#1a1b26"
+bg_float = "#1e2030"
+bg_highlight = "#2f334d"
+bg_popup = "#1e2030"
+bg_search = "#3e68d7"
+bg_sidebar = "#1e2030"
+bg_statusline = "#1e2030"
+bg_visual = "#2d3f76"
+black = "#1b1d2b"
+blue = "#82aaff"
+blue0 = "#3e68d7"
+blue1 = "#65bcff"
+blue2 = "#0db9d7"
+blue5 = "#89ddff"
+blue6 = "#b4f9f8"
+blue7 = "#394b70"
+blue8 = "#283457"
+border = "#1b1d2b"
+border_highlight = "#589ed7"
+comment = "#636da6"
+cyan = "#86e1fc"
+dark3 = "#545c7e"
+dark5 = "#737aa2"
+error = "#c53b53"
+fg = "#b8ceff"
+fg_dark = "#828bb8"
+fg_float = "#c8d3f5"
+fg_gutter = "#3b4261"
+fg_sidebar = "#828bb8"
+green = "#c3e88d"
+green1 = "#4fd6be"
+green2 = "#41a6b5"
+hint = "#4fd6be"
+info = "#0db9d7"
+magenta = "#c099ff"
+magenta2 = "#ff007c"
+none = "NONE"
+orange = "#ff966c"
+purple = "#fca7ea"
+red = "#ff757f"
+red1 = "#c53b53"
+teal = "#4fd6be"
+black_bright = "#444a73"
+blue_bright = "#9ab8ff"
+cyan_bright = "#b2ebff"
+green_bright = "#c7fb6d"
+magenta_bright = "#caabff"
+red_bright = "#ff8d94"
+white = "#828bb8"
+white_bright = "#c8d3f5"
+yellow = "#ffc777"
+terminal_black = "#444a73"
+todo = "#82aaff"
+warning = "#ffc777"
+text = "#394b70"
+ignore = "#545c7e"
+yellow_bright = "#ffd8ab"

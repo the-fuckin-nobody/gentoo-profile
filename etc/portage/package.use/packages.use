@@ -1,0 +1,146 @@
+# ** app-admin **
+app-admin/doas persist
+
+# ** app-crypt **
+app-crypt/gcr gtk
+
+# ** app-misc **
+app-misc/fastfetch elf dbus
+
+# ** app-office **
+app-office/libreoffice -cups
+app-office/obsidian appindicator
+
+# ** app-shells **
+app-shells/zsh doc examples
+
+# ** app-text **
+app-text/xmlto text
+app-text/poppler cairo
+
+# ** dev-cpp **
+dev-cpp/cairomm X
+dev-cpp/gtkmm X
+
+# ** dev-lang **
+dev-lang/rust-bin clippy
+
+# ** dev-libs **
+dev-libs/libdbusmenu gtk3
+dev-libs/xmlsec nss
+dev-libs/weston -pipewire -suid kiosk wayland-compositor
+
+# ** dev-lua **
+dev-lua/lgi lua_targets_luajit
+
+#  ** dev-python **
+dev-python/dbus-python -python_targets_python3_12 python_targets_python3_13
+dev-python/pillow tiff webp
+
+# ** dec-qt **
+dev-qt/qtgui jpeg egl vulkan
+dev-qt/qtcore icu
+dev-qt/qtbase gtk opengl vulkan accessibility X
+dev-qt/qttools opengl
+dev-qt/qtwayland compositor gnome vulkan accessibility
+dev-qt/qtdeclarative vulkan accessibility opengl
+dev-qt/qt5compat qml
+dev-qt/qtmultimedia opengl
+>=dev-qt/qtgui-5.15.6 X
+
+# ** gui-apps **
+gui-apps/grim jpeg
+gui-apps/ironbar tray http cairo volume
+gui-apps/wbg jpeg jpegxl png webp
+
+# ** gui-libs **
+gui-libs/gtk-layer-shell introspection
+gui-libs/gtk X
+
+# ** kde-frameworks **
+kde-frameworks/sonnet qml
+
+# # ** llvm-runtimes **
+# llvm-runtimes/compiler-rt-sanitizers -nsan
+llvm-core/clang-runtime -sanitize
+llvm-core/llvm binutils-plugin
+# ** media-fonts **
+media-fonts/noto cjk
+media-fonts/iosevka -iosevka iosevka-curly
+
+# ** media-gfx **
+media-gfx/imagemagick fftw fontconfig jpeg xml truetype
+media-gfx/inkscape X
+
+# ** media-libs **
+media-libs/freetype harfbuzz
+media-libs/harfbuzz icu
+media-libs/tiff jpeg
+media-libs/libv4l dvb jpeg
+media-libs/clutter egl
+media-libs/cogl gles2
+media-libs/gst-plugins-base theora
+media-libs/vips pango
+
+# ** media-sound **
+media-sound/playerctl introspection
+
+# ** media-video **
+media-video/pipewire dbus v4l sound-server readline jack-client ffmpeg echo-cancel extra pipewire-alsa gstreamer
+media-video/mpv jpeg sixel bluray
+media-video/ffmpeg vpx opus x264 encode dav1d svg mp3 jpegxl webp x265
+media-video/obs-studio v4l
+
+# ** media-libs **
+media-libs/mesa X -llvm
+media-libs/libepoxy X
+
+# ** net-libs **
+net-libs/nodejs npm
+
+# ** net-print **
+net-print/cups usb
+
+# ** net-wireless **
+net-wireless/iwd wired
+
+# ** net-misc **
+net-misc/networkmanager -bluetooth -ppp -wext -modemmanager policykit iwd -wpa_supplicant
+
+# ** net-im **
+net-im/telegram-desktop qt6
+# ** gui-wm **
+gui-wm/sway tray wallpapers -X
+gui-wm/hyprland hyprpm -qtutils
+
+# ** gui-apps **
+gui-apps/swaybg gdk-pixbuf
+
+# ** sys-apps ** 
+sys-apps/openrc -pam netifrc newnet
+
+# ** sys-boot **
+sys-boot/grub mount
+
+# ** sys-kernel **
+sys-kernel/gentoo-sources symlink
+sys-kernel/installkernel grub dracut
+
+# ** sys-libs **
+sys-libs/zlib minizip
+
+# ** x11-libs **
+x11-libs/gtk+ vim-syntax X
+x11-libs/xapp introspection
+x11-libs/cairo X
+x11-libs/gdk-pixbuf jpeg
+x11-libs/libxkbcommon X
+
+# ** x11-misc **
+x11-misc/xdg-user-dirs gtk
+
+# ** x11-terms/ghostty **
+x11-terms/ghostty -X
+
+# ** x11-themes **
+x11-themes/kvantum qt5

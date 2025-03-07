@@ -1,0 +1,12 @@
+# set the compiler(s) to be used
+CC=gcc
+CPP=cpp
+CXX=g++
+
+# reset flags in case compiler specific flags have been defined
+COMMON_FLAGS="-O2 -march=native"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+LDFLAGS="-Wl,--as-needed -Wl,-O1"

@@ -1,0 +1,7 @@
+dev-libs/libutf8proc **
+dev-libs/gobject-introspection ~amd64
+dev-libs/gobject-introspection-common ~amd64
+dev-libs/glib ~amd64
+dev-libs/girara **
+dev-libs/hyprland-protocols **
+dev-libs/hyprlang **

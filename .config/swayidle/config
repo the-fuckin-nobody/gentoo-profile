@@ -1,0 +1,6 @@
+timeout 5 'brightnessctl -sq --device=platform\:\:kbd_backlight set 0' resume 'brightnessctl --device=platform\:\:kbd_backlight -rq'
+timeout 150 'brightnessctl -sq set 1%' resume 'brightnessctl -rq'
+timeout 180 'pidof gtklock || gtklock -H -T 3'
+timeout 300 'niri msg action power-off-monitors'
+timeout 900 'sleep 0.1 && loginctl suspend'
+before-sleep 'pidof gtklock || gtklock -H -T 3'

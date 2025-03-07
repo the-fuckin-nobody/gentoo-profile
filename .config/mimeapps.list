@@ -1,0 +1,28 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Zen-QRWS12.desktop
+x-scheme-handler/https=userapp-Zen-QRWS12.desktop
+x-scheme-handler/chrome=userapp-Zen-QRWS12.desktop
+text/html=userapp-Zen-QRWS12.desktop
+application/x-extension-htm=userapp-Zen-QRWS12.desktop
+application/x-extension-html=userapp-Zen-QRWS12.desktop
+application/x-extension-shtml=userapp-Zen-QRWS12.desktop
+application/xhtml+xml=userapp-Zen-QRWS12.desktop
+application/x-extension-xhtml=userapp-Zen-QRWS12.desktop
+application/x-extension-xht=userapp-Zen-QRWS12.desktop
+pdf=/usr/share/applications/org.pwmt.zathura.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+x-scheme-handler/obsidian=obsidian.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Firefox Developer Edition-RF5L22.desktop;userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;
+x-scheme-handler/https=userapp-Firefox Developer Edition-RF5L22.desktop;userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;
+x-scheme-handler/chrome=userapp-Firefox Developer Edition-RF5L22.desktop;userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;
+text/html=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/x-extension-htm=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/x-extension-html=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/x-extension-shtml=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/xhtml+xml=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/x-extension-xhtml=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/x-extension-xht=userapp-Zen Browser-E19VY2.desktop;userapp-Zen Browser-X54MZ2.desktop;userapp-Zen Browser-2WDIZ2.desktop;userapp-Zen Browser-XBYRZ2.desktop;userapp-Zen-QRWS12.desktop;userapp-Firefox Developer Edition-RF5L22.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/plain=nvim.desktop;

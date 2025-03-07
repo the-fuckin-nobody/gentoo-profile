@@ -1,0 +1,23 @@
+# created by eselect-repo
+
+[gentoo]
+location = /var/db/repos/gentoo
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/gentoo.git
+
+
+
+[guru]
+location = /var/db/repos/guru
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/guru.git
+
+[localrepo]
+location = /var/db/repos/localrepo
+auto-sync = no
+masters = gentoo
+
+[vaacus]
+location = /var/db/repos/vaacus
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/vaacus.git

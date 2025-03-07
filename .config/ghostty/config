@@ -1,0 +1,9 @@
+# Font settings
+font-family = "Lotion Nerd Font Propo"
+font-size = 12
+adjust-underline-thickness = 
+
+theme = tokyonight-moon
+
+window-decoration = false
+font-thicken = false

@@ -1,0 +1,3 @@
+#>=sys-kernel/gentoo-kernel-6.12.8
+#>=virtual/dist-kernel-6.12.8 [6.12.7]
+# =sys-apps/openrc-9999

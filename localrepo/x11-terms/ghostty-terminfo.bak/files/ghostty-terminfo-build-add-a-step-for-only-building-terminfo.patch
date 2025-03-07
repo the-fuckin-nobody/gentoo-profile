@@ -1,0 +1,17 @@
+diff --git a/src/build/GhosttyResources.zig b/src/build/GhosttyResources.zig
+index 912308e4..1f0ed150 100644
+--- a/src/build/GhosttyResources.zig
++++ b/src/build/GhosttyResources.zig
+@@ -75,6 +75,11 @@ pub fn init(b: *std.Build, cfg: *const Config) !GhosttyResources {
+             copy_step.addArg(b.fmt("{s}/share", .{b.install_path}));
+             copy_step.step.dependOn(&mkdir_step.step);
+             try steps.append(&copy_step.step);
++
++            // This step is to generate the terminfo data without building the rest of
++            // Ghostty, which takes a long time
++            const terminfo_step = b.step("terminfo", "Install the terminfo database");
++            terminfo_step.dependOn(&copy_step.step);
+         }
+     }
+ 
+

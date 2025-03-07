@@ -1,0 +1,14 @@
+ls
+ls | name=diyfetch
+ls | name="diyfetch"
+ls | whwere name="diyfetch"
+ls | where name="diyfetch"
+ls | where name=diyfetch
+ls | where name
+ls | where name = 'diyfetch'
+cd
+ls
+doasexit
+exit
+btop
+exit

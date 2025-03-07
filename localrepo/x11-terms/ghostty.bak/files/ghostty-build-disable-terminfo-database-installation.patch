@@ -1,0 +1,40 @@
+diff --git a/src/build/GhosttyResources.zig b/src/build/GhosttyResources.zig
+index 912308e4..f225fae8 100644
+--- a/src/build/GhosttyResources.zig
++++ b/src/build/GhosttyResources.zig
+@@ -47,35 +47,6 @@ pub fn init(b: *std.Build, cfg: *const Config) !GhosttyResources {
+             try steps.append(&cap_install.step);
+         }
+ 
+-        // Compile the terminfo source into a terminfo database
+-        {
+-            const run_step = RunStep.create(b, "tic");
+-            run_step.addArgs(&.{ "tic", "-x", "-o" });
+-            const path = run_step.addOutputFileArg("terminfo");
+-            run_step.addFileArg(source);
+-            _ = run_step.captureStdErr(); // so we don't see stderr
+-
+-            // Ensure that `share/terminfo` is a directory, otherwise the `cp
+-            // -R` will create a file named `share/terminfo`
+-            const mkdir_step = RunStep.create(b, "make share/terminfo directory");
+-            switch (cfg.target.result.os.tag) {
+-                // windows mkdir shouldn't need "-p"
+-                .windows => mkdir_step.addArgs(&.{"mkdir"}),
+-                else => mkdir_step.addArgs(&.{ "mkdir", "-p" }),
+-            }
+-            mkdir_step.addArg(b.fmt("{s}/share/terminfo", .{b.install_path}));
+-            try steps.append(&mkdir_step.step);
+-
+-            // Use cp -R instead of Step.InstallDir because we need to preserve
+-            // symlinks in the terminfo database. Zig's InstallDir step doesn't
+-            // handle symlinks correctly yet.
+-            const copy_step = RunStep.create(b, "copy terminfo db");
+-            copy_step.addArgs(&.{ "cp", "-R" });
+-            copy_step.addFileArg(path);
+-            copy_step.addArg(b.fmt("{s}/share", .{b.install_path}));
+-            copy_step.step.dependOn(&mkdir_step.step);
+-            try steps.append(&copy_step.step);
+-        }
+     }
+ 
+     // Shell-integration

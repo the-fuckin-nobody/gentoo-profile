@@ -1,0 +1,12 @@
+diff --git a/resources/niri.desktop b/resources/niri.desktop
+index 5470fe76..76c5c3c5 100644
+--- a/resources/niri.desktop
++++ b/resources/niri.desktop
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=Niri
+ Comment=A scrollable-tiling Wayland compositor
+-Exec=niri-session
++Exec=dbus-run-session niri --session
+ Type=Application
+ DesktopNames=niri
