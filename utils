@@ -1,0 +1,136 @@
+#!/usr/bin/bash
+
+set -eo pipefail
+
+get_volume() {
+	VAL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ print $2 }')
+	VOLUME_LEVEL=$(echo "$VAL" | awk '{ print $1 * 100 }')
+	echo "$VOLUME_LEVEL"
+}
+
+inc_volume() {
+	STEP=${1:-5}
+	if [[ -z "$STEP" || ! "$STEP" =~ ^[0-9]{1,2}$ ]]; then
+		echo "Error: Invalid increment value" >&2
+		exit 1
+	fi
+	LEVEL=$(get_volume)
+	NEW_LEVEL=$(( LEVEL + STEP ))
+	NEW_LEVEL=$(( NEW_LEVEL > 100 ? 100 : NEW_LEVEL ))
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ "$NEW_LEVEL%"
+	notify_send "Volume: $(get_volume)%"
+}
+
+dec_volume() {
+	STEP=${1:-5}
+	if [[ -z "$STEP" || ! "$STEP" =~ ^[0-9]+$ ]]; then
+		echo "Error: Invalid increment value" >&2
+		exit 1
+	fi
+	LEVEL=$(get_volume)
+	NEW_LEVEL=$((LEVEL - STEP ))
+	NEW_LEVEL=$((NEW_LEVEL < 0 ? 0 : NEW_LEVEL))
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ "$NEW_LEVEL%"
+	notify_send "Volume: $(get_volume)%"
+}
+
+mute() {
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+	STATUS=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -o "\[MUTED\]" || echo "[UNMUTED]")
+	notify_send "Volume: $(get_volume)% $STATUS"
+}
+
+notify_send() {
+	ID=9898989
+	ID=$(notify-send -p --replace-id="$ID" "$@")
+}
+
+volume() {
+	case "$1" in
+		"--inc") inc_volume "$2"
+			;;
+		"--dec") dec_volume "$2"
+			;;
+		"--get") get_volume
+			;;
+		"--mute") mute
+			;;
+		*) cat <<EOF
+Usage:
+	--inc VAL: increase volume level by VAL%
+	--dec VAL: decrease volume level by VAL%
+	--mute: toggle mute
+	--get: get current volume level
+EOF
+			;;
+	esac
+}
+
+get_brightness() {
+	LEVEL=$(brightnessctl i | grep -Eo "[0-9]+%" | cut -d "%" -f 1)
+	echo $LEVEL
+}
+
+inc_brightness() {
+	STEP="${1:-5}"
+	if [[ -z "$STEP" || ! "$STEP" =~ ^[0-9]+$ ]]; then
+		echo "Error: Invalid increment value" >&2
+		exit 1
+	fi
+	LEVEL=$(get_brightness)
+	NEW_LEVEL=$((LEVEL + STEP ))
+	NEW_LEVEL=$((NEW_LEVEL > 100 ? 100 : NEW_LEVEL))
+	brightnessctl -q set ${NEW_LEVEL}%
+	notify_send "Brightness: $(get_brightness)%"
+}
+
+dec_brightness() {
+	STEP="${1:-5}"
+	if [[ -z "$STEP" || ! "$STEP" =~ ^[0-9]+$ ]]; then
+		echo "Error: Invalid increment value" >&2
+		exit 1
+	fi
+	LEVEL=$(get_brightness)
+	NEW_LEVEL=$((LEVEL - STEP ))
+	NEW_LEVEL=$((NEW_LEVEL < 1 ? 1 : NEW_LEVEL))
+	brightnessctl -q set ${NEW_LEVEL}%
+	notify_send "Brightness: $(get_brightness)%"
+}
+
+
+brightness() {
+	case ${1} in
+		"--inc") inc_brightness "$2"
+			;;
+		"--dec") dec_brightness "$2"
+			;;
+		"--get") get_brightness
+			;;
+		*) cat <<EOF
+Usage:
+	--inc VAL: increase brightness level by VAL%
+	--dec VAL: decrease brightness level by VAL%
+	--get: get current volume level
+EOF
+			;;
+	esac
+}
+
+main() {
+	case "$1" in
+		"volume") volume "$2" "$3"
+			;;
+		"brightness") brightness "$2" "$3"
+			;;
+		*) cat <<EOF
+Usage:
+	volume (command) [opts]
+	brightness (command) [opts]
+EOF
+			;;
+	esac
+}
+
+main "$@"
